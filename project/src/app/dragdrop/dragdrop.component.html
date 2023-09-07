@@ -1,0 +1,14 @@
+<p>dragdrop works!</p>
+
+<div class="first" cdkDropListGroup>
+  <h1>todo</h1>
+  <div cdkDropList [cdkDropListData]="todo"  (cdkDropListDropped)="drop($event)">
+  <div cdkDrag *ngFor="let item of todo">{{item}}</div>
+</div></div>
+
+  <div class="second">
+    <h1>done</h1>
+    <div cdkDropList [cdkDropListData]="todo"  (cdkDropListDropped)="drop($event)">
+        <div cdkDrag [cdkDragData]="item" *ngFor="let item of done">{{done}}</div>
+      </div>
+  </div>
